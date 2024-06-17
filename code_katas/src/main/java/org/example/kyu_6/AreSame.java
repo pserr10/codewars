@@ -1,9 +1,4 @@
-package level_6_kyu;
-
-import java.util.List;
-import java.util.Arrays;
-import java.util.Objects;
-import java.util.stream.Collectors;
+package org.example.kyu_6;
 /*
 https://www.codewars.com/kata/550498447451fbbd7600041c
 
@@ -17,11 +12,16 @@ b = [121, 14641, 20736, 36100, 25921, 361, 20736, 361]
 
 a = [121, 144, 19, 161, 19, 144, 19, 11]
 b = [132, 14641, 20736, 361, 25921, 361, 20736, 361]
-
 */
+
+import java.util.List;
+import java.util.Arrays;
+import java.util.Objects;
+import java.util.stream.Collectors;
+
 public class AreSame {
 
-    public static Boolean comp(int[] a, int[] b) {
+    public  Boolean comp(int[] a, int[] b) {
 
         final boolean isNullVal =  (Objects.isNull(a) || Objects.isNull(b));
         if(isNullVal) return false;
@@ -39,32 +39,4 @@ public class AreSame {
 
         return squaredSortedListA.equals(sortedListB);
     }
-
-
-
-    public static void main(String[] args) {
-        //test1
-        int[] a = {2, 2, 3};
-        int[] b = {4, 9, 9};
-
-        //test2
-        int[] e =  {121, 144, 19, 161, 19, 144, 19, 11};
-        int[] d = new int[]{121, 14641, 20736, 361, 25921, 361, 20736, 361};
-
-        //
-
-        System.out.println("isSame ed: " + comp(e,d));
-        System.out.println("isSame ab: " + comp(a,b));
-
-    }
-
 }
-
-
-
-
-
-
-
-
-
